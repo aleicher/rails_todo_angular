@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :todos
+  scope :api do
+    resources :todos, defaults: {format: :json}
+  end
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
