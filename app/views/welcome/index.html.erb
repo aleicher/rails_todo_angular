@@ -4,4 +4,10 @@
   <input type="text" ng-model='newTodo.description' placeholder="Enter todo description">
   <input type="submit" value="Add">
 </form>
-{{ newTodo }}
+<div ng-controller="TodosCtrl">
+  <ul>
+    <li ng-repeat="todo in todos">
+      {{todo.title}}, {{todo.description}}
+    </li>
+  </ul>
+</div>
