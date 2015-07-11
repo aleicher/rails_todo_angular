@@ -1,7 +1,9 @@
 app.controller('TodosCtrl', ['$scope', 'Todo', function($scope, Todo) {
   $scope.todos = Todo.all();
-  Todo.get(1);
-  Todo.update(1, {title: "updated title"});
+  Todo.get(1).$promise.then(function(todo){
+    console.log(todo);
+    Todo.update(todo, {title: "updated title2"});
+  });
 
   $scope.reloadTodos = function() {
     $scope.todos = Todo.all();

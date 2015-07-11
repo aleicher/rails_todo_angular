@@ -13,8 +13,8 @@ app.factory('Todo', ['$resource', function($resource) {
     return this.service.save(attributes);
   };
 
-  Todo.prototype.update = function($id, attributes) {
-    return this.service.update({todoId: $id}, attributes);
+  Todo.prototype.update = function(todo, attributes) {
+    return this.service.update({todoId: todo.id}, attributes);
   };
 
   Todo.prototype.get = function($id) {
