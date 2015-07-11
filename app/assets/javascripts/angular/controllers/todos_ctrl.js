@@ -1,5 +1,6 @@
 app.controller('TodosCtrl', ['$scope', 'Todo', function($scope, Todo) {
   $scope.todos = Todo.all();
+  Todo.get(1);
   Todo.update(1, {title: "updated title"});
 
   $scope.reloadTodos = function() {

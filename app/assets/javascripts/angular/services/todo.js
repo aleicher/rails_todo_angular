@@ -17,5 +17,9 @@ app.factory('Todo', ['$resource', function($resource) {
     return this.service.update({todoId: $id}, attributes);
   };
 
+  Todo.prototype.get = function($id) {
+    return this.service.get({todoId: $id});
+  };
+
   return new Todo;
 }]);
