@@ -7,9 +7,13 @@ app.controller('TodosCtrl', ['$scope', 'Todo',
     $scope.reloadTodos();
 
     function reloadTodos() {
-      $scope.todos = Todo.all();
+      $scope.todos = [];
+      Todo.all().$promise.then(function(todos){
+        for (var i = 0; i < todos.length; i++){
+          $scope.todos.push(todos[i]);
+        }
+      });
     }
-
 
     function updateTodo(todo) {
       Todo.update(todo);
