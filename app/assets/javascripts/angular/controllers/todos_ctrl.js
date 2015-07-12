@@ -10,7 +10,9 @@ app.controller('TodosCtrl', ['$scope', 'Todo',
       $scope.todos = [];
       Todo.all().$promise.then(function(todos){
         for (var i = 0; i < todos.length; i++){
-          $scope.todos.push(todos[i]);
+          todo = todos[i];
+          todo.due_date = new Date(todo.due_date);
+          $scope.todos.push(todo);
         }
       });
     }
