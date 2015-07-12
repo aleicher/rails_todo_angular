@@ -24,6 +24,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'angularjs-rails'
+gem 'angular-ui-bootstrap-rails'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+
 
 gem 'responders', '~> 2.0'
 # Use ActiveModel has_secure_password
