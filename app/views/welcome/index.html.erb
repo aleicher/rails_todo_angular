@@ -3,6 +3,7 @@
 <form ng-submit="createTodo()">
   <input type="text" ng-model='newTodo.title' placeholder="Enter todo title">
   <input type="text" ng-model='newTodo.description' placeholder="Enter todo description">
+  <input type="date" ng-model='newTodo.due_date'>
   <input type="submit" value="Add">
 </form>
 <button ng-click="reloadTodos()">Reload</button>
